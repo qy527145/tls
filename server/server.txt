@@ -1,4 +1,4 @@
-openssl genrsa -out server.key
+openssl ecparam -name prime256v1 -genkey -out server.key
 
 openssl req -new -key server.key -out server.csr
 
