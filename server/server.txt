@@ -4,4 +4,4 @@ openssl req -new -key server.key -out server.csr
 
 openssl x509 -req -in server.csr -out server.crt -CA ..\ca\ca.crt -CAkey ..\ca\ca.key -sha256 -CAcreateserial -days 36524 -extfile server.ext
 
-openssl pkcs12 -export -in server.crt -inkey server.key -out server.pfx
+openssl pkcs12 -export -in server.crt -inkey server.key -out server.pfx -password pass:
