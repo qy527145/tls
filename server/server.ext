@@ -1,6 +1,10 @@
-subjectAltName=@asd
+basicConstraints        = critical, CA:FALSE
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always, issuer:always
+keyUsage                = critical, nonRepudiation, digitalSignature, keyEncipherment, keyAgreement 
+extendedKeyUsage        = critical, serverAuth
+subjectAltName          = @server
 
-[asd]
+[server]
 IP.1=127.0.0.1
-IP.2=192.168.60.167
 DNS.1=localhost
